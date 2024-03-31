@@ -1,16 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
-import { CatsService } from 'src/cats/cats.service';
-import { DogsService } from './dogs.service';
+import { Controller } from "@nestjs/common";
 
-@Controller('dogs')
-export class DogsController {
-  constructor(
-    private readonly catsService: CatsService,
-    private readonly dogsService: DogsService,
-  ) {}
-
-  @Get()
-  findAll(): string[] {
-    return this.catsService.findAll();
-  }
-}
+@Controller("dogs")
+export class DogsController {}

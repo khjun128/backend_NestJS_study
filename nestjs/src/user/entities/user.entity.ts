@@ -19,6 +19,9 @@ export class UserEntity {
   email: string;
 
   @Column()
+  name: string;
+
+  @Column()
   password: string;
 
   @CreateDateColumn({ name: "created_at" })

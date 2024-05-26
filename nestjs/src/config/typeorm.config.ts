@@ -9,6 +9,7 @@ export const typeORMConfig: TypeOrmModuleOptions = {
   username: "root",
   password: process.env.DB_PASS,
   database: "nestjs",
-  entities: [],
+  entities: [__dirname + "/../**/*.entity{.ts,.js}"],
+  // autoLoadEntities: true,
   synchronize: true,
 };

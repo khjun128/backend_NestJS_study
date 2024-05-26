@@ -14,6 +14,7 @@ export enum Role {
 @Entity({ name: "account_info" })
 export class AccountInfoEntity {
   @PrimaryGeneratedColumn()
+  @OneToMany(() => PostingEntity, (posting) => posting.writer)
   id: number;
 
   @Column({ type: "enum", enum: Status, default: Status.ACTIVE })
@@ -27,7 +28,4 @@ export class AccountInfoEntity {
 
   @Column({ nullable: true })
   age: number;
-
-  @OneToMany(() => PostingEntity, (posting) => posting.writer)
-  postings: PostingEntity[];
 }

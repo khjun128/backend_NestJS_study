@@ -1,1 +1,4 @@
-export class CreatePostingDto {}
+export class CreatePostingDto {
+  title: string;
+  content: string;
+}
